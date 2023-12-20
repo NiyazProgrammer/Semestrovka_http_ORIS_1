@@ -1,0 +1,10 @@
+{
+  "Port" : 2525,
+  "Address": "127.0.0.1",
+  "StaticFilesPath": "static",
+  "EmailSender": "master.niyaz@yandex.ru",
+  "PasswordSender": "Niyaz_-04",
+  "FromName": "Niyaz",
+  "SmtpServerHost": "smtp.yandex.ru",
+  "SmtpServerPort": 25
+}

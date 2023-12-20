@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style>
+        body {
+            display: block;
+            box-sizing: border-box;
+        }
+        .container {
+            width: 100%;
+            height: 794px;
+            box-sizing: border-box;
+            display: block;
+            font-family: Helvetica Neue,sans-serif;
+            background-color: #f5f3f5;
+        }
+        main {
+            width: 100%;
+            height: 722px;
+            padding: 36px 0px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .nav-back-link {
+            width: 71px;
+            height: 17px;
+            box-sizing: border-box;
+            color: #280033;
+            display: block;
+            font-size: 14px;
+            position: absolute;
+            right: 1120px;
+            margin-top: 6px;
+        }
+        .nav-back-link a {
+            box-sizing: border-box;
+            background-image: url(/images_2/back-icon.svg);
+            color: #280033;
+            background-position-y: 50%;
+            background-position-x: 0px;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: right;
+            padding-left: 22px;
+            text-decoration-style: solid;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .main_container {
+            background-color: white;
+            border-radius: 3px;
+            box-sizing: border-box;
+            display: block;
+            max-width: 768px;
+            min-height: 650px;
+            min-width: 706px;
+            width: 768px;
+        }
+        .main_container-header {
+            background-color: #280033;
+            border-radius: 3px 3px 0 0;
+            min-height: 58px;
+            padding: 41px 34px 47px;
+            position: relative;
+            text-align: center;
+            box-sizing: border-box;
+            display: block;
+        }
+        .header-title {
+            box-sizing: border-box;
+            color: white;
+            display: block;
+            font-weight: 700;
+            text-align: center;
+            white-space: pre-line;
+            font-size: 26px;
+        }
+        .enter-text-link {
+            box-sizing: border-box;
+            display: block;
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 9px;
+            text-align: center;
+        }
+        .enter-link {
+            box-sizing: border-box;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            color: white;
+            
+        }
+        .enter-link u {
+            color: #ffc500;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .header-bottom-icon {
+            background-color: #280033;
+            border-bottom-color: rgb(255, 255, 255);
+            border-bottom-left-radius: 100%;
+            border: 4px solid #fff;
+            border-radius: 100%; ;
+            border-bottom-style: solid;
+            border-bottom-width: 4px;
+            display: flex;
+            box-sizing: border-box;
+            content: " ";
+            position: absolute;
+            height: 50px;
+            justify-content: center;
+            left: 50%;
+            overflow-x: hidden;
+            text-align: center;
+            transform: translate(-50%,50%);
+            width: 50px;
+        }
+        .header-bottom-icon img {
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            overflow: hidden;
+            margin: 6px 6px; 
+            overflow-clip-margin: content-box;
+        }
+        .main_container-body {
+            display: block;
+            box-sizing: border-box;
+            padding: 46px 46px;
+        }
+        .main_container-body-1 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            margin: -48px -48px;
+            overflow: hidden;
+        }
+        .registration-form, .registration-for-apps {
+            box-sizing: border-box;
+            display: block;
+            flex-basis: 0%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            max-width: 50%;
+            padding: 48px 48px;
+            font-family: rubik,helvetica,arial,sans-serif;
+        }
+        .registration-section {
+            box-sizing: border-box;
+            display: block;
+        }
+        .registration-section-title {
+            box-sizing: border-box;
+            color: #280033;
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0 0 18px;
+        }
+        .input-container {
+            display: block;padding-bottom: 18px;
+            width: 100%;
+            max-height: 25px;
+            padding-bottom: 18px;
+        }
+        .input-container-1 {
+            display: block;
+            margin-top: 20px;
+            position: relative;
+            min-height: 25px;
+        }
+        .input-textbox {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid #d6d0d5; 
+            font-size: 16px;
+            font-family: inherit;
+            line-height: 1;
+            width: 100%;
+            height: 25px;
+            max-height: 27px;
+            cursor: text;
+            display: inline-block;
+            font-weight: 400;
+            letter-spacing: normal;
+            padding-bottom: 6px;
+            word-spacing: 0px;
+        }
+        .input-textbox:focus {
+            outline: none;
+        }
+        .input-textbox:hover {
+            border-bottom: 1px solid #3a3a3a; 
+        }
+        .button-sybmit-container {
+            box-sizing: border-box;
+            display: block;
+            margin: 12px 0px;
+            width: 100%;
+            /* height: 36px; */
+        }
+        .button-sybmit {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 3px;
+            color: #fff;
+            background-color: #520044;;
+            cursor: default;
+            font-size: 12px;
+            font-weight: 600;
+            height: 36px;
+            border: none;
+            justify-content: center;
+            letter-spacing: 0.15px;
+            line-height: 16px;
+            min-height: 18px;
+            opacity: .5;
+            padding: 10px 18px;
+            text-align: center;
+            text-transform: uppercase;
+            vertical-align: top;
+            width: 100%;
+        }
+        .registration-for-apps-section {
+            box-sizing: border-box;
+            display: block;
+        }
+        .registration-for-apps-title {
+            box-sizing: border-box;
+            color: #280033;
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            padding-bottom: 18px;
+            margin-top: 0px;
+        }
+        .button-facebook-container,
+        .button-google-container,
+        .button-twitch-container,
+        .button-apple-container {
+            align-items: center;
+            border-radius: 3px;
+            color: #fff;
+            display: inline-block;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 24px;
+            margin-bottom: 12px;
+            min-height: 18px;
+            padding: 5px 24px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            vertical-align: top;
+            width: 100%;
+        }
+        .button-facebook-container {
+            background-color: #1877f2;
+            border: 1px solid #1877f2;
+        }
+        .button-google-container {
+            background-color: #1877f2;
+            border: 1px solid #1877f2;
+        }
+        .button-twitch-container {
+            background-color: #9146ff;
+            border: 1px solid #9146ff;
+        }
+        .button-apple-container {
+            background-color: black;
+            border: 1px solid black;
+        }
+        .container-icon-apps {
+            background-color: #fff;
+            border-radius: 2px;
+            box-sizing: border-box;
+            color: #fff;
+            display: flex;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            left: 6px;
+            letter-spacing: .15px;
+            line-height: 24px;
+            text-align: center;
+            position: absolute;
+            top: 6px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <nav class="nav-back-link">
+                <a href="http://127.0.0.1:5500/MainPage.html">Назад</a>
+            </nav>
+            <div class="main_container">
+                <div class="main_container-header">
+                    <h1 class="header-title">С возвращением!</h1>
+                    <p class="enter-text-link">
+                        <a class="enter-link">
+                            Войти с помощью имени участника
+                            <u>Регистрация</u>
+                         </a>
+                    </p>
+                    <span class="header-bottom-icon">
+                        <img src="/images_2/iconFandom.png">
+                    </span>
+                </div>
+                <div class="main_container-body">
+                    <div class="main_container-body-1">
+                        <form class="registration-form" id="send-form" method="post" action="/page404.html">
+                            <section class="registration-section">
+                                <h6 class="registration-section-title">Войти с помощью эл. почты</h6>
+                                <div class="input-container">
+                                    <div class="input-container-1">
+                                        <input type="text" class="input-textbox" placeholder="Имя участника" name="Email">
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <div class="input-container-1">
+                                        <input type="password" class="input-textbox" placeholder="Пароль" name="Password">
+                                    </div>
+                                </div>
+                                <div class="button-sybmit-container">
+                                    <a>
+                                        <button class="button-sybmit" type="submit" >
+                                            Войти
+                                        </button>
+                                    </a>
+                                </div>
+                            </section>
+                        </form>
+                        <form class="registration-for-apps">
+                            <section class="registration-for-apps-section">
+                                <h6 class="registration-for-apps-title">Войти через аккаунт в соц. сетях</h6>
+                                <button class="button-facebook-container">
+                                    <span class="container-icon-apps">
+                                        <img src="/images_2/facebook-icon.png">
+                                    </span>
+                                    <span>Войти через Facebook</span>
+                                </button>
+                                <button class="button-google-container">
+                                    <span class="container-icon-apps">
+                                        <img src="/images_2/google-icon.png">
+                                    </span>
+                                    <span>Войти через Google</span>
+                                </button>
+                                <button class="button-twitch-container">
+                                    <span class="container-icon-apps">
+                                        <img src="/images_2/twitch-icon.png">
+                                    </span>
+                                    <span>Войти через Twitch</span>
+                                </button>
+                                <button class="button-apple-container">
+                                    <span class="container-icon-apps">
+                                        <img src="/images_2/apple-icon.png">
+                                    </span>
+                                    <span>Связаться с Apple</span>
+                                </button>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="switchingMainPage.js"></script>
+</body>
+</html>

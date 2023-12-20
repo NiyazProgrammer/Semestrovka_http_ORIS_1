@@ -1,0 +1,15 @@
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/bin/Debug/net7.0/TestEmailSend
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/bin/Debug/net7.0/TestEmailSend.deps.json
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/bin/Debug/net7.0/TestEmailSend.runtimeconfig.json
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/bin/Debug/net7.0/TestEmailSend.dll
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/bin/Debug/net7.0/TestEmailSend.pdb
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.csproj.AssemblyReference.cache
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.GeneratedMSBuildEditorConfig.editorconfig
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.AssemblyInfoInputs.cache
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.AssemblyInfo.cs
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.csproj.CoreCompileInputs.cache
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.dll
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/refint/TestEmailSend.dll
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.pdb
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/TestEmailSend.genruntimeconfig.cache
+/Users/niyazrizvanov/SemestrWorkORIS_1/TestEmailSend/TestEmailSend/obj/Debug/net7.0/ref/TestEmailSend.dll

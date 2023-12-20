@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personage</title>
+    <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.global-navigation {
+    width: 66px; 
+    background-color: #1e0c1b; 
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+.global-navigation-top {
+    width: 66px;
+    height: 478px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+.global-navigation-nav {
+    width: 66px;
+    height: 478px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.ref-main-fandom {
+    width: 66px;
+    height: 63px;
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+}
+.nav-title-fandom {
+    width: 42px;
+    height: 12px;
+    color: #ffc500;
+    font-family: rubik,helvetica,arial,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.ref-search {
+    width: 36px;
+    height: 36px;
+    margin-top: 15px;
+    border: 2px solid #1e0c1b;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.nav-links {
+    width: 66px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.nav-refs-images {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+.nav-titles {
+    width: 29px;
+    height: 12px;
+    color: #ffc500;
+    font-family: rubik,helvetica,arial,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+.background-oval {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #3c323b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-ref-create-viki {
+    width: 66px;
+    height: 65px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-ref-create-viki img{
+    width: 36px;
+    height: 36px;
+}
+.nav-title-create-viki {
+    width: 54px;
+    height: 25px;
+    color: white;
+    font-family: rubik,helvetica,arial,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-top: 5px;
+}
+.global-navigation-bottom {
+    width: 66px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+.profile-block {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.nav-ref-profile {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-ref-profile img {
+    width: 26px;
+    height: 26px;
+}
+body {
+    /*height: 100%; */
+    overflow-x: hidden;
+    background-color: #111111;
+}
+.background-container {
+    /* width: calc(100% - 66px); */
+    width: 100%;
+    height: 2700px;
+    margin-left: 66px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-color: black;
+}
+.main-container {
+    max-width: 100%;
+    height: 2500px;
+    margin-top: 0px;
+    margin-right: 167px;
+    margin-bottom: 48px;
+    margin-left: 167px;
+    display: flex;
+    flex-direction: column;
+}
+.main-registration-button {
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+.registration-button {
+    width: 255px;
+    height: 34px;
+    margin-top: 18px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.enter {
+    width: 44px;
+    height: 18px;
+    padding-left: 18px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 18px;
+    border: 1px s;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    font-family: rubik,helvetica,arial,sans-serif;
+    border: 1px solid white;
+    align-items: center;
+    border-radius: 3px;
+    color: white;
+}
+.registration {
+    width: 117px;
+    height: 18px;
+    padding-left: 18px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 18px;
+    border: 1px solid #6ec1f8;
+    background-color: #6ec1f8;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 900;
+    color: black;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.registration img{
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+}
+.fandom-community-header {
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+}
+.ref-fandom-community-header {
+    width: 242px;
+    height: 70px;
+    margin-right: 18px;
+    text-decoration: none;
+}
+.fandom-community-header__top-container_local-navigation {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.fandom-community-header__top-container {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+.fandom-community-header__community-name-wrapper {
+    width: 222px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ref-fandom-community-header__community-name-wrapper {
+    width: 213px;
+    height: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.ref-fandom-community-header__community-name-wrapper:hover {
+    color: gray;
+    text-decoration: underline;
+}
+.page-counter {
+    width: 68px;
+    height: 30px;
+    margin-left: 383px;
+    margin-right: 6px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+.page-counter__value {
+    width: 68px;
+    height: 17px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+.page-counter__label {
+    width: 68px;
+    height: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+.wiki-tools-button-search-message-sun {
+    width: 95px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.wiki-tools-button-search-message-sun img{
+    width: 18px;
+    height: 18px;
+} 
+.tools-white-search-icon, .tools-themes-icon, .tools-comunication-icon {
+    width: 18px;
+    height: 20px;
+    padding: 5px 6px;
+}
+.tools-themes-icon, .tools-comunication-icon {
+    border-left: 1px solid white;
+}
+.fandom-community-header__local-navigation {
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: block;
+}
+.fandom-community-header-table-attachments {
+    width: 100%;
+    height: 40px;
+    /* align-items: flex-end; */
+    /* display: flex; */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(2ch,max-content));
+    grid-gap: 10px;
+}
+.fandom-community-header-table-attachments a{
+    text-decoration: none;
+    color: white;
+}
+.fandom-community-header-table-attachments a:hover {
+    text-decoration: underline;
+    color: grey;
+}
+.label-explore-menu {
+    width: 147px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.label-explore-menu img{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.watchdogs-menu {
+    width: 115px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.watchdogs-menu2 {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.apps-menu {
+    width: 117px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.roots-menu {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.container-body-main-info {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 2400px;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) min-content;
+    grid-template-rows: max-content;
+}
+.right-rail-wrapper {
+    width: 240px;
+    max-height: 100%;
+    position: relative;
+    padding: 0px 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    justify-content: flex-start;
+}
+.popular-pages {
+    width: 220px;
+    height: 100%;
+    margin-top: 50px;
+}
+.popular-pages-section {
+    width: 100%;
+    height: 359px;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.popular-pages-section h2 {
+    width: 189px;
+    height: 20px;
+    padding: 0px 3px;
+    margin-left: -3px;
+    margin-right: -3px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+.popular-pages-list {
+    width: 100%;
+    height: 323px;
+    display: grid;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-columns: 220px;
+    padding-left: 0px;
+}
+.popular-pages-item {
+    width: 100%;
+    height: 55px;
+    display: list-item;
+    list-style-type: none;
+    color: #4ac7eb;
+}
+.popular-pages-item a {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.popular-pages-item a:hover {
+    text-decoration: underline;
+}
+.popular-pages-item img {
+    width: 53px;
+    height: 53px;
+    border: 1px solid #464646;
+    margin-right: 10px;
+}
+.page-main {
+    max-width: 770px;
+    height: 2400px;
+    background-color: #111111;
+    padding: 24px 36px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.page-side-tools_wrapper {
+    display: flex;
+    height: 100%;
+    width: 36px;
+    top: 18px;
+    justify-content: center;
+    position: relative;
+    right: 55px;
+    bottom: 18px;
+}
+.page-side-tools {
+    width: 36px;
+    height: 81px;
+}
+.content-size-toggle {
+    width: 36px;
+    height: 36px;
+    padding: 1px 6px;
+    margin-bottom: 9px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #3c323b;
+}
+.content-size-toggle img{ 
+    width: 20px;
+    height: 20px;
+}
+.page-edit {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c323b;
+    border-radius: 50%;
+    border: none;
+}
+.page-edit img{
+    width: 24px;
+    height: 24px;
+}
+.main-container-info {
+    width: 100%;
+    height: 2400px;
+    position: relative;
+    left: -30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.page-header {
+    width: 100%;
+    height: 106px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.page-header-top {
+    width: 750px;
+    height: 36px;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+}
+.ref-personage {
+    font-size: 14px;
+    color: #4ac7eb;
+    text-decoration: none;
+}
+.page-header__bottom {
+    width: 759px;
+    height: 69px;
+    display: flex;
+    color: white;
+    font-size: 36px;
+    font-weight: 300;
+}
+.page-header__title-wrapper {
+    width: 535px;
+    height: 69px;
+    display: flex;
+    flex-direction: column;
+}
+.name-personage-DB {
+    font-size: 36px;
+    font-weight: 300;
+}
+.page-header__page-subtitle {
+    width: 561px;
+    height: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.page-header__actions {
+    width: 225px;
+    height: 69px;
+    padding-top: 9px;
+    margin-left: 9px;
+    display: flex;
+}
+.page-header__actions a {
+    width: 150px;
+    height: 22px;
+    padding: 7px 12px;
+    text-decoration: none;
+    display: flex;
+    margin-left: 2px;
+    margin-right: 3px;
+    justify-content: flex-start;
+}
+.page-header__actions img{
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+}
+.page-header__actions h {
+    display: flex;
+    align-items: center;
+    color: #4ac7eb;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 130px;
+    height: 25px;
+}
+.page-header_action-button {
+    width: 50px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-header_action-button img {
+    width: 18px;
+    height: 18px;
+}
+.page-header_action-button h {
+    width: 1px;
+    height: 18px;
+    border-left: 0.5px solid #464646;
+    margin-right: 15px;
+}
+footer {
+    width: 100%;
+    height: 505px;
+    margin-left: 66px;
+    background-color: #280033;;
+}
+.global-footer__content {
+    max-width: 1024px;
+    height: 288px;
+    padding-top: 70px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    margin: 0px 175px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+}
+.global-footer_header {
+    width: 231px;
+    height: 46px;
+    margin-bottom: 24px;
+}
+.global-footer_header img{
+    width: 183px;
+    height: 46px;
+}
+.global-footer__section-1 {
+    width: 231px;
+    height: 102px;
+    color: white;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.global-footer__section-1 h3, .global-footer__section-2 h3 {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.global-footer__links {
+    width: 231px;
+    height: 84px;
+    column-gap: 30px;
+    padding-left: 0px;
+}
+.global-footer__links li {
+    text-align: left;
+    display: list-item;
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: #ffc500;
+    font-size: 14px;
+}
+.global-footer__section-1-social-section {
+    width: 231px;
+    height: 52px;
+    margin-top: 30px;
+    color: white;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.global-footer-social-links {
+    width: 100%;
+    height: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,18px);
+    row-gap: 18px;
+    column-gap: 18px;
+    padding-left: 0px;
+}
+.global-footer-social-links li {
+    display: list-item;
+    list-style-type: none;
+}
+.global-footer-social-links img {
+    width: 18px;
+    height: 18px;
+}
+.global-footer__section-2 {
+    width: 231px;
+    height: 102px;
+    color: white;
+    font-family: rubik,helvetica,arial,sans-serif;
+    margin-top: 34px;
+}
+.global-footer__section-fandom-apps {
+    width: 231px;
+    height: 100px;
+    margin-top: 34px;
+}
+.global-footer__section-fandom-apps h3 {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: rubik,helvetica,arial,sans-serif;
+    margin-bottom: 6px;
+    color: white;
+    text-transform: uppercase;
+}
+.global-footer__section-fandom-apps p {
+    color: white;
+    font-size: 14px;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.global-footer__section-fandom-stores {
+    width: 231px;
+    height: 78px;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+}
+.footer-fandom-app-icon {
+    width: 78px;
+    height: 78px;
+    margin-right: 18px;
+}
+.global-footer-apps-links {
+    width: 119px;
+    height: 78px;
+    margin-top: 0px;
+    padding-left: 0px;
+}
+.appStore-links {
+    width: 119px;
+    height: 35px;
+    margin-bottom: 8px;
+    display: list-item;
+    list-style-type: none;
+}
+.appStore-links img {
+    width: 119px;
+    height: 35px;
+}
+.googlePlay-links img {
+    width: 119px;
+    height: 35px;
+}
+.googlePlay-links {
+    width: 119px;
+    height: 35px;
+    display: list-item;
+    list-style-type: none;
+}
+.global-footer__bottom {
+    width: 100%;
+    height: 120px;
+    padding: 0px 20px;
+    background-color: #111111;
+}
+.global-footer__bottom-Watch-Dogs-Viki, .global-footer__bottom-mobile-version {
+    width: 100%;
+    height: 53px;
+    font-family: rubik,helvetica,arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.global-footer__bottom-Watch-Dogs-Viki {
+    color: white;
+    font-size: 12px;
+}
+.global-footer__bottom-mobile-version {
+    border-top: 1px solid #464646;
+    color: #ffc500;
+    font-size: 14px;
+}
+/* Personage */
+.content-personage-1 {
+    width: 100%;
+    min-height: 1450px;
+    box-sizing: border-box;
+    color: #e6e6e6;
+    display: flex;
+    font-family: rubik,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+.content-personage-2 {
+    width: 100%;
+    min-height: 800px;
+    box-sizing: border-box;
+    color: #e6e6e6;
+    display: flex;
+    font-family: rubik,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+.main-text-descriptions-1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    height: 1400px;
+}
+.main-text-descriptions-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+}
+.text-description-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.text-description-1 h, .text-description-2{ 
+    font-size: 16px;
+}
+.text-description-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.title-description-container {
+    width: 100%;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.title-Opportunities-container, .title-interesting-facts-container {
+    width: 100%;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.table-description {
+    width: 40%;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 1400px;
+    flex-direction: column;
+    background-color: #111111;
+    border: 1px solid rgba(110, 193, 248, 0.5);
+    margin-left: 15px;
+}
+.table-description-title {
+    width: 100%;
+    height: 46px;
+    padding: 12px 9px;
+    background-color: rgb(110, 193, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111111;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: rubik,helvetica,arial,sans-serif;
+}
+.table-description-main-image-DB {
+    width: 100%;
+    height: 344px;
+}
+.data-personage-title-container {
+    width: 100%;
+    height: 36px;
+    background-color: rgb(110, 193, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 700;
+}
+.current-name-container-DB, 
+.nicknames-container-DB,
+.age-container-DB,
+.date-birthday-and-place-container-DB,
+.national-container-DB,
+.live-place-container-DB,
+.english-voice-acting-container-DB,
+.russian-voice-acting-container-DB,
+.russian-voice-acting-container-DB,
+.first-appearance-voice-acting-container-DB,
+.second-appearance-voice-acting-container-DB {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(110, 193, 248, 0.5);
+}
+.body-date-birthday-and-place-container-DB {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    line-height: 20px;
+}
+.affiliation-container-DB {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(110, 193, 248, 0.5);
+    height: 165px;
+}
+.body-list-affiliation-container-DB{
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    height: 128px;
+    line-height: 18px;
+}
+.body-list-affiliation-container-DB a{
+    color: rgb(74, 199, 235);
+    text-align: left;
+}
+.body-list-affiliation-container-DB ul{
+    margin: 0px;
+    padding-left: 5px;
+}
+.title-date {
+    margin: 0px;
+    font-size: 12px;
+    font-size: 700;
+}
+.proffesion-container-DB {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(110, 193, 248, 0.5);
+    height: 115px;
+}
+.body-list-proffesion-container-DB {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    height: 84px;
+    line-height: 18px;
+}
+.body-list-proffesion-container-DB ul{
+    margin: 0px;
+    padding-left: 5px;
+}
+.family-container-DB {
+    box-sizing: border-box;
+    height: 66px;
+    padding: 9px;
+    border-bottom: 1px solid rgba(110, 193, 248, 0.5);
+}
+.body-list-family-container-DB ul{
+    margin: 0px;
+    padding-left: 5px;
+}
+.body-list-family-container-DB {
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    height: 25px;
+    line-height: 18px;
+}
+.title-container-series-watch-dogs {
+    width: 100%;
+    height: 36px;
+    background-color: rgb(110, 193, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 700;
+}
+.appearance-container-DB {
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(110, 193, 248, 0.5);
+    height: 80px;
+}
+.body-list-appearance-container-DB{
+    box-sizing: border-box;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    padding: 9px;
+    flex-direction: column;
+    height: 50px;
+    line-height: 18px;
+}
+.body-list-appearance-container-DB a{
+    color: rgb(74, 199, 235);
+    text-align: left;
+}
+.body-list-appearance-container-DB ul{
+    margin: 0px;
+    padding-left: 5px;
+}
+.list-interesting-facts {
+    padding-left: 12px;
+    margin-top: 0px;
+}
+    </style>
+</head>
+<body>
+    <div class="global-navigation">
+        <div class="global-navigation-top">
+            <nav class="global-navigation-nav">
+                <a class="ref-main-fandom" href="//www.fandom.com/explore-ru?uselang=ru">
+                    <img  src="/images/iconFandom.png">
+                    <div class="nav-title-fandom">FANDOM</div>
+                </a>
+                <a title="Поиск" class="ref-search">
+                    <img class="search-icon" src="/images/searchIcon.png">
+                </a>
+                <a class="nav-links" href="https://www.fandom.com/explore-ru?uselang=ru#%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%B8%D0%B3%D1%80%D1%8B">
+                    <span class="background-oval">
+                        <img class="nav-refs-images" src="/images/gamepadIcon.png">
+                    </span>
+                    <div class="nav-titles">ИГРЫ</div>
+                </a>
+                <a class="nav-links" href="https://www.fandom.com/explore-ru?uselang=ru#%D0%9A%D0%B8%D0%BD%D0%BE">
+                    <span class="background-oval">
+                        <img class="nav-refs-images" src="/images/filmIcon.png">
+                    </span>
+                    <div class="nav-titles">КИНО</div>
+                </a>
+                <a class="nav-links" href="https://www.fandom.com/explore-ru?uselang=ru#%D0%A2%D0%92">
+                    <span class="background-oval">
+                        <img class="nav-refs-images" src="/images/tvIcon.png">
+                    </span>
+                    <div class="nav-titles">ТВ</div>
+                </a>
+                <a class="nav-links" href="">
+                    <span class="background-oval">
+                        <img class="nav-refs-images" src="/images/openBookIcon.png">
+                    </span>
+                    <div class="nav-titles">ВИКИ</div>
+                </a>
+                <a class="nav-ref-create-viki" href="https://createnewwiki.fandom.com/wiki/Special:CreateNewWiki?uselang=ru">
+                    <img class="nav-refs-images" src="/images/plusIcon.png">
+                    <span class="nav-title-create-viki">
+                        <h>СОЗДАТЬ</h>
+                        <h>ВИКИ</h> 
+                    </span>
+                </a>
+            </nav>
+        </div>
+        <div class="global-navigation-bottom">
+            <div class="profile-block">
+                <a class="nav-ref-profile" href="https://auth.fandom.com/signin?flow=a379c925-9798-4e97-9fd5-3a3ec77e8274">
+                    <img src="/images/whiteProfileIcon.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="background-container">
+        <div class="main-container">
+            <div class="main-registration-button">
+                <div class="registration-button">
+                    <a class="enter" href="http://127.0.0.1:5500/Enter.html">
+                        ВОЙТИ
+                    </a>
+                    <a class="registration" href="http://127.0.0.1:5500/Registration.html">
+                        <img src="/images/blackProfileIcon.png.png">
+                        РЕГИСТРАЦИЯ
+                    </a>
+                </div>
+            </div>
+            <header class="fandom-community-header">
+                <a class="ref-fandom-community-header" href="https://watchdogs.fandom.com/ru/wiki/Watch_Dogs_Wiki">
+                    <img src="/images/logo-watchdogs.png">
+                </a>
+                <div class="fandom-community-header__top-container_local-navigation">
+                    <div class="fandom-community-header__top-container">
+                        <div class="fandom-community-header__community-name-wrapper">
+                            <a class="ref-fandom-community-header__community-name-wrapper" href="https://watchdogs.fandom.com/ru/wiki/Watch_Dogs_Wiki">Watch_Dogs Вики</a>
+                        </div>
+                        <div class="page-counter">
+                            <div class="page-counter__value">270</div>
+                            <div class="page-counter__label">СТРАНИЦ</div> 
+                        </div>
+                        <div class="wiki-tools-button-search-message-sun">
+                            <a class="tools-white-search-icon" href="https://watchdogs.fandom.com/ru/wiki/%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:%D0%9F%D0%BE%D0%B8%D1%81%D0%BA">
+                                <img src="/images/whiteSearchIcon.png">
+                            </a>
+                            <a class="tools-comunication-icon" href="https://watchdogs.fandom.com/ru/f">
+                                <img src="/images/communicationIcon.png">
+                            </a>
+                            <a class="tools-themes-icon" href="https://watchdogs.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B8_%D0%B2_Watch_Dogs_2">
+                                <img src="/images/sunIcon.png">
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="fandom-community-header__local-navigation">
+                        <ul class="fandom-community-header-table-attachments">
+                            <li class="explore-menu">
+                                <div class="label-explore-menu">
+                                    <img src="/images/whiteOpenBook.png">
+                                    <a>
+                                        <span>ИССЛЕДОВАТЬ</span>
+                                    </a>
+                                    <img src="/images/dropdown.png">
+                                </div>
+                            </li>
+                            <li class="watchdogs-menu">
+                                <div class="label-explore-menu">
+                                    <a href="https://watchdogs.fandom.com/ru/wiki/Watch_Dogs"">
+                                        <span>WATCH DOGS</span>
+                                    </a>
+                                    <img src="/images/dropdown.png">
+                                </div>
+                            </li>
+                            <li class="watchdogs-menu2">
+                                <div class="label-explore-menu">
+                                    <a href="https://watchdogs.fandom.com/ru/wiki/Watch_Dogs_2">
+                                        <span>WATCH DOGS 2</span>
+                                    </a>
+                                    <img src="/images/dropdown.png">
+                                </div>
+                            </li>
+                            <li class="apps-menu">
+                                <div class="label-explore-menu">
+                                    <a href="https://watchdogs.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%98%D0%B3%D1%80%D1%8B">
+                                        <span>ПРИЛОЖЕНИЯ</span>
+                                    </a>
+                                    <img src="/images/dropdown.png">
+                                </div>
+                            </li>
+                            <li class="roots-menu">
+                                <div class="label-explore-menu">
+                                    <a href="https://watchdogs.fandom.com/ru/wiki/Watch_Dogs_%D0%92%D0%B8%D0%BA%D0%B8:%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0">
+                                        <span>ПРАВИЛА</span>
+                                    </a>
+                                    <img src="/images/dropdown.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="container-body-main-info">
+                <main class="page-main">
+                    <div class="page-side-tools_wrapper">
+                        <div class="page-side-tools">
+                            <button class="content-size-toggle">
+                                <img src="/images/content-size-icon.png">
+                            </button>
+                            <button class="content-size-toggle">
+                                <img src="/images_3/list-icon.png">
+                            </button>
+                            <a class="page-edit" href="https://auth.fandom.com/signin?flow=06a9399f-fc49-43a5-bf21-f0c576da7330">
+                                <img src="/images/edit-icon.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main-container-info">
+                        <div class="page-header">
+                            <div class="page-header-top">
+                                <span>в:&nbsp;</span>
+                                <a class="ref-personage" href="https://watchdogs.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%B6%D0%B8" title="Категория:Персонажи">Персонажи</a>
+                                <h>,&nbsp;</h>
+                                <a class="ref-personage" href="https://watchdogs.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:Watch_Dogs_2" title="Категория:Watch Dogs 2"> Персонажи в Watch Dogs 2</a>
+                                <h>,&nbsp;</h>
+                                <a class="ref-personage" href="https://watchdogs.fandom.com/ru/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%9F%D1%80%D0%BE%D1%82%D0%B0%D0%B3%D0%BE%D0%BD%D0%B8%D1%81%D1%82%D1%8B" title="Категория:Watch Dogs 2"> Протагонисты</a>
+                            </div>
+                            <div class="page-header__bottom">
+                                <div class="page-header__title-wrapper">
+                                    <h class="name-personage-DB">Маркус Холлоуэй</h>
+                                </div>
+                                <div class="page-header__actions">
+                                    <a class="" href="https://auth.fandom.com/signin?redirect=https%3A%2F%2Fwatchdogs.fandom.com%2Fru%2Fwiki%2F%25D0%259A%25D0%25B0%25D1%2582%25D0%25B5%25D0%25B3%25D0%25BE%25D1%2580%25D0%25B8%25D1%258F%3A%25D0%259F%25D0%25B5%25D1%2580%25D1%2581%25D0%25BE%25D0%25BD%25D0%25B0%25D0%25B6%25D0%25B8_%25D0%25B2_Watch_Dogs_2%3Fveaction%3Dedit&uselang=ru">
+                                        <img src="/images/edit-icon.png">
+                                        <h>sign in to edit</h>
+                                    </a>
+                                    <div class="page-header_action-button">
+                                        <h></h>
+                                        <img src="/images/three-point.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-personage-1">
+                            <div class="main-text-descriptions-1">
+                                <div class="text-description-1">
+                                    <h>Маркус Холлоуэй (англ. Marcus Holloway) — главный герой в игре Watch Dogs 2. Он талантливый хакер, который объединился с хакерской группировкой DedSec в области залива Сан-Франциско, чтобы противостоять коррумпированной системе.</h>
+                                    <div class="title-description-container">
+                                        <h2>Биография</h2>
+                                    </div>
+                                    <h>Маркус родился в Лос-Анджелесе, штат Калифорния в 1992 году, но большую часть прожил в Окленде. Рос в довольно бедной семье. Он слегка эгоистичен, но у него есть харизма и отличные хакерские навыки, что делает его почти неуязвимым для системы Blume. Компания Ubisoft заявила, что Маркус презирает ctOS, так как они спутали его с профилем преступника высокого уровня.</h>
+                                    <p> </p>
+                                    <h>Маркус является членом группировки хакеров DedSec и помогает им достигнуть большого числа последователей, которые необходимы группировке для борьбы с системой. Он, как и остальные члены DedSec'a, борется с людьми, которые управляют и хотят управлять ctOS для собственной выгоды.</h>
+                                    <p> </p>
+                                    <h>Основным оружием Маркуса является обезьяний кулак (англ. Monkey's Fist), который он сделал по инструкции из Интернета. (пример завязывания)</h>
+                                    <p> </p>
+                                    <h>К тому же, Маркус может распечатать на 3D-принтере для своих целей различные устройства: от несмертельного тазера до опаснейшего гранатомёта.</h>
+                                    <div class="title-description-container">
+                                        <h2>Watch Dogs 2</h2>
+                                    </div>
+                                    <h>Летом, 2016 года, Маркус, находясь на испытательном сроке DedSec, вламывается в северную ферму Blume, чтобы полностью удалить свои личные данные, а заодно поставить бэкдор. Маркусу удаётся завершить задачу, и когда он выходит из фермы, на его голову внезапно надевают мешок и кидают в кузов какого-то минивэна. Чуть позже оказывается, что это сделали представители DedSec — Ситара, Ренч, Гораций и Джош. Вместе они отправляются на пляжную вечеринку, где все отмечают членство Маркуса. На вечеринке случайно оказывается и Душан Немеч, который крадёт мобильный телефон Маркуса и убеждается в новом потенциально опасном члене DedSec. Утром, Маркус просыпается в неизвестной спальне. Позже купив штаны Маркус отправляется на основную базу DedSec в Сан-Франциско.</h>    
+                                </div>
+                            </div>
+                            <div class="table-description">
+                                <div class="table-description-title">
+                                    <h>Маркус Холлоуэй</h>
+                                </div>
+                                <img class="table-description-main-image-DB" src="/images_3/Marcus_Holloway.png">
+                                <div class="data-personage-title-container">
+                                    <h>Данные о персонажа</h>
+                                </div>
+                                <div class="current-name-container-DB">
+                                    <h3 class="title-date">Настоящее имя</h3>
+                                    <h>Маркус Холлоуэй</h>
+                                </div>
+                                <div class="nicknames-container-DB">
+                                    <h3 class="title-date">Прозвища</h3>
+                                    <h>Ретр0</h>
+                                </div>
+                                <div class="age-container-DB">
+                                    <h3 class="title-date">Возраст</h3>
+                                    <h>24 года (на 2016)</h>
+                                </div>
+                                <div class="date-birthday-and-place-container-DB">
+                                    <h3 class="title-date">Дата и место рождения</h3>
+                                    <div class="body-date-birthday-and-place-container-DB">
+                                        <h>11 декабря 1992 год</h>
+                                        <h>Лос-Анджелес, Калифорния, США</h>
+                                    </div>
+                                </div>
+                                <div class="national-container-DB">
+                                    <h3 class="title-date">Национальность</h3>
+                                    <h>Афро-американец</h>
+                                </div>
+                                <div class="live-place-container-DB">
+                                    <h3 class="title-date">Место проживания</h3>
+                                    <h>Сан-Франциско, Калифорния, США</h>
+                                </div>
+                                <div class="affiliation-container-DB">
+                                    <h3 class="title-date">Принадлежность</h3>
+                                    <div class="body-list-affiliation-container-DB">
+                                        <ul>
+                                            <li><a>DedSec</a></li>
+                                            <li><a>Ситара</a></li>
+                                            <li><a>Ренч</a></li>
+                                            <li><a>Гораций</a></li>
+                                            <li><a>Джош</a></li>
+                                            <li><a>Ти-Бон</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="proffesion-container-DB">
+                                    <h3 class="title-date">Род занятий</h3>
+                                    <div class="body-list-proffesion-container-DB">
+                                        <ul>
+                                            <li>Серый хакер</li>
+                                            <li>Вигилант</li>
+                                            <li>Хактивист</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="family-container-DB">
+                                    <h3 class="title-date">Семья</h3>
+                                    <div class="body-list-family-container-DB">
+                                        <ul>
+                                            <li>Неназванные родители</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="title-container-series-watch-dogs">
+                                    <h>Серия Watch Dogs</h>
+                                </div>
+                                <div class="appearance-container-DB">
+                                    <h3 class="title-date">Появление</h3>
+                                    <div class="body-list-appearance-container-DB">
+                                        <ul>
+                                            <li><a>Watch Dogs 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="english-voice-acting-container-DB">
+                                    <h3 class="title-date">Английская озвучка</h3>
+                                    <h>Руффин Прентисс</h>
+                                </div>
+                                <div class="russian-voice-acting-container-DB">
+                                    <h3 class="title-date">Русская озвучкаа</h3>
+                                    <h>Дмитрий Курта</h>
+                                </div>
+                                <div class="first-appearance-voice-acting-container-DB">
+                                    <h3 class="title-date">Первое появление</h3>
+                                    <h>Пролог</h>
+                                </div>
+                                <div class="second-appearance-voice-acting-container-DB">
+                                    <h3 class="title-date">Последнее появление</h3>
+                                    <h>"Полная мощность"</h>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-personage-2">
+                            <div class="main-text-descriptions-2">
+                                <div class="text-description-2">
+                                    <div class="title-Opportunities-container">
+                                        <h2>Возможности</h2>
+                                    </div>
+                                    <h>Маркус также может делать другие вещи: управлять окружающими приборами, шлагбаумом и другими преградами. Также он может взрывать паровые трубы и другие механизмы. Маркус может взламывать людей и брать у них банковский счет, ботнет-ресурсы. Кроме того что он может брать ботнет-ресурсы и банковский счет он может подслушивать чужие телефонные разговоры и подсматривать чужие переписки. С улучшениями Маркус сможет: управлять машинами не садясь в них, управлять подъёмниками, использовать шоковые гранаты и СВУ, управлять роботами, отключать системы безопасности, может угонять транспорт без сирены, разгонять машины до максимальной скорости, возвращать вертолёты на базу, позволяет делать людей целью банд или полиции, отвлекать людей, может взламывать светофоры и устроить хаос на дороге, отключать все объекты на время находящийся рядом с Маркусом, отключать свет рядом с ним. Маркус может переодеваться в разную одежду покупая ее или получить бесплатно. Он может покупать машины и заказывать их, но для этого ему нужно приложение "Машина по требованию". Также машину можно не покупать и найти разные машины которые потом можно будет заказывать.</h>    
+                                    <div class="title-interesting-facts-container">
+                                        <h2>Интересные факты</h2>
+                                    </div>
+                                    <ul class="list-interesting-facts">
+                                        <li>На левой части штанов виднеется отсылка к AC IV:Black Flag;</li>
+                                        <li>Прототипом Маркуса стал актёр Руффин Прентисс;</li>
+                                        <li>Если спасти Эйдена Пирса в дополнительной операции "Тени", можно получить набор "Привет из прошлого", в котором входит: его кепка, бандана и пальто;</li>
+                                        <li>Не смотря на то, что в большинстве видео и артах Маркус в одетой маске "Лиса" , в игре он почти всегда ходит без маски. Есть только 2 момента, когда он в маске: Если Маркус находится в запретной территории и когда он достаёт шокер или любое другое оружие.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="right-rail-wrapper">
+                    <div class="popular-pages">
+                        <section class="popular-pages-section">
+                            <h2>Популярные страницы</h2>
+                            <ul class="popular-pages-list">
+                                <li class="popular-pages-item">
+                                    <a>
+                                        <img src="/images/right-block-elment-1.png">
+                                        <span>Эйден Пирс</span>
+                                    </a>
+                                </li>
+                                <li class="popular-pages-item">
+                                    <a>
+                                        <img src="/images/right-block-elment-2.png">
+                                        <span>Ренч</span>
+                                    </a>
+                                </li>
+                                <li class="popular-pages-item">
+                                    <a>
+                                        <img src="/images/right-block-elment-3.png">
+                                        <span>Маркус Холлоуэй</span>
+                                    </a>
+                                </li>
+                                <li class="popular-pages-item">
+                                    <a>
+                                        <img src="/images/right-block-elment-4.png">
+                                        <span>DedSec</span>
+                                    </a>
+                                </li>
+                                <li class="popular-pages-item">
+                                    <a>
+                                        <img src="/images/right-block-elment-5.png">
+                                        <span>Watch Dogs 2</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="global-footer__content">
+        <div>
+            <h2 class="global-footer_header">
+                <a>
+                    <img src="/images/Fandom-logo-footer.png">
+                </a>
+            </h2>
+            <section class="global-footer__section-1">
+                <h3>Наши ресурсы</h3>
+                <ul class="global-footer__links">
+                    <li>
+                        <a>Fandom</a>
+                    </li>
+                    <li>
+                        <a>Muthead</a>
+                    </li>
+                    <li>
+                        <a>Fanatical</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="global-footer__section-1-social-section">
+                <h3>в социальных сетях</h3>
+                <ul class="global-footer-social-links">
+                    <li>
+                        <a><img src="/images/facebook-icon.png"></a>
+                    </li>
+                    <li>
+                        <a><img src="/images/twitter-icon.png"></a>
+                    </li>
+                    <li>
+                        <a><img src="/images/wk-icon.png"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div>
+            <section class="global-footer__section-2">
+                <h3>Обзор</h3>
+                <ul class="global-footer__links">
+                    <li><a>Fandom</a></li>
+                    <li><a>Что такое Фэндом?</a></li>
+                    <li><a>	О нас</a></li>
+                    <li><a>Вакансии</a></li>
+                    <li><a>В прессе </a></li>
+                    <li><a>Обратная связь</a></li>
+                    <li><a>Условия использования</a></li>
+                    <li><a>Общая карта сайта</a></li>
+                    <li><a>Локальная карта сайта</a></li>
+                </ul>
+            </section>
+        </div>
+        <div>
+            <section class="global-footer__section-2">
+                <h3>Сообщество</h3>
+                <ul class="global-footer__links">
+                    <li><a>Вики Сообщества</a></li>
+                    <li><a>Поддержка</a></li>
+                    <li><a>Справка</a></li>
+                </ul>
+            </section>
+            <section class="global-footer__section-2">
+                <h3>РЕКЛАМА НА САЙТЕ</h3>
+                <ul class="global-footer__links">
+                    <li><a>Медиа-кит</a></li>
+                </ul>
+            </section>
+        </div>
+        <div>
+            <section class="global-footer__section-fandom-apps">
+                <h3>Приложения Фэндома</h3>
+                <p>Оставайтесь в курсе всего </p>
+                <p>происходящего на ваших</p> 
+                <p>любимых сообществах.</p>
+            </section>
+            <section class="global-footer__section-fandom-stores">
+                <img class="footer-fandom-app-icon" src="/images/footer-fandom-app-icon.png">
+                <ul class="global-footer-apps-links">
+                    <li class="appStore-links">
+                        <a><img src="/images/footer-appStore.png"></a>
+                    </li>
+                    <li class="googlePlay-links">
+                        <a><img src="/images/footer-googlePlay.png"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="global-footer__bottom">
+        <div class="global-footer__bottom-Watch-Dogs-Viki">Watch Dogs Вики — это сообщество Фэндома на портале Видеоигры.</div>
+        <div class="global-footer__bottom-mobile-version">Мобильная версия</div>
+    </div>
+</footer>
+</html>
